@@ -45,11 +45,37 @@ class LessonsController < ApplicationController
 	end
 	
 	def edit
+		@lesson = Lesson.find(params[:id])
+		
+		respond_to do |format|
+			format.html
+			format.xml { render :xml => @lesson }
+		end
 	end
 	
 	def update
+		@lesson = Lesson.find(params[:id])
+		
+		respond_to do |format|
+			if @lesson.update_attributes(params[:lesson])
+				format.html { redirect_to @lesson,
+										:notice => 'Lesson was successfully updated.' }
+				format.xml { head :ok }
+			else
+				format.html { render :action => "edit" }
+				format.xml { render :xml => @lesson.errors,
+										:status => :unprocessable_entity }
+			end
+		end
 	end
 	
 	def destroy
+		@lesson = Lesson.find(params[:id])
+		@lesson.destroy
+		
+		respond_to do |format|
+		format.html { redirect_to(lessons_url) }
+		format.xml { head :ok }
+		end
 	end
 end
