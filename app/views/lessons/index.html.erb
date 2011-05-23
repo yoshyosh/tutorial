@@ -1,1 +1,5 @@
 <h1>Lessons Start Now!</h1>
+<%= @lessons.each do |lesson| %>
+	<%= lesson.image %><br />
+	<%= lesson.subject %><br />
+<% end %>
