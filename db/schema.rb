@@ -10,12 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110523070605) do
+ActiveRecord::Schema.define(:version => 20110524014052) do
 
   create_table "lessons", :force => true do |t|
     t.string   "subject"
     t.string   "image"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "units", :force => true do |t|
+    t.string   "title"
+    t.string   "source"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

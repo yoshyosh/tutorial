@@ -1,0 +1,21 @@
+<h1>Make a new Unit</h1>
+<div id="newunit">
+<%= form_for(@unit) do |f| %>
+	<div class="field">
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :source %><br />
+		<%= f.text_field :source %>
+	</div>
+	<div class="field">
+		<%= f.label :image %><br />
+		<%= f.text_field :image %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>
+		

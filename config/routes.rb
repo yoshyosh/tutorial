@@ -1,5 +1,6 @@
 Tutorial::Application.routes.draw do
 	resources :lessons
+	resources :units
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

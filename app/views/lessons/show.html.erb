@@ -1,4 +1,9 @@
-<h1><%= @lesson.subject %></h1>
-<%= link_to 'Edit', edit_lesson_path %><br />
+<div class="lesson_header">
+	<%= link_to image_tag(@lesson.image), lessons_path %>
+		<div id="lesson_description">
+			<%= @lesson.description %>
+		</div>
+</div>
+<%= link_to 'Edit', edit_lesson_path %>
 <%= link_to 'Destroy', lesson_path(@lesson), :method => :delete,
 																		   :confirm => 'Are you sure?' %>

@@ -1,6 +1,9 @@
 <h1>Lessons Start Now!</h1>
+<ul id="gallery">
 <% @lessons.each do |lesson| %>
-	<%= image_tag(lesson.image, :size => "100x50") %><br />
-	<%= lesson.subject %><br />
+	<li>
+		<%= link_to image_tag(lesson.image, :class => "largeicon"), lesson_path(lesson) %>
+	</li>
 <% end %>
-<%= link_to 'New Lesson', new_lesson_path %>
+</ul>
+

@@ -20,7 +20,6 @@ nav {
 }
 
 section {
-	background-color: #fff;
 	width: 750px;
 	min-height: 500px;
 	height: 500px;
@@ -36,7 +35,38 @@ section h1 {
 	padding-top: 5px;
 }
 
+#gallery {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden; /*what is this */
+}
+
+#gallery li {
+	float: left;
+}
+
+div.lesson_header {
+	width: 750px;
+	min-height: 140px;
+	height: 140px;
+	height: auto !important;
+}
+
+div.lesson_header #lesson_description {
+	float: right;
+	background-color: #fff;
+	width: 500px;
+	min-height: 140px;
+	height: 140px;
+	height: auto !important;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
 footer {
+	clear: all;
 	width: 750px;
 	margin-top: 10px;
 	background-color: #333;
@@ -45,4 +75,17 @@ footer {
 	margin-bottom: 0;
 }
 
+footer ul {
+list-style: none;
+}
 
+/* Units CSS*/
+
+#newunit {
+	background-color: #fff;
+	width: 400px;
+}
+
+h1 {
+	color: #fff;
+}
