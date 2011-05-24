@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110524014052) do
+ActiveRecord::Schema.define(:version => 20110524084134) do
 
   create_table "lessons", :force => true do |t|
     t.string   "subject"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110524014052) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "lesson_id"
   end
 
 end
