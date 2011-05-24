@@ -3,7 +3,14 @@
 		<div id="lesson_description">
 			<%= @lesson.description %>
 		</div>
+		<div class="lesson_content">
+			<ul>
+		<% @lesson.units.each do |unit| %>
+				<li><%= image_tag(unit.image) %></li>
+		<% end %>
+			</ul>
+		</div>
 </div>
-<%= link_to 'Edit', edit_lesson_path %>
+<%= link_to 'Edit', edit_lesson_path(@lesson) %>
 <%= link_to 'Destroy', lesson_path(@lesson), :method => :delete,
 																		   :confirm => 'Are you sure?' %>
