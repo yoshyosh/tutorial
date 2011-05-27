@@ -55,7 +55,9 @@ div.lesson_header {
 
 div.lesson_header #lesson_description {
 	float: right;
-	background-color: #fff;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
 	width: 500px;
 	min-height: 140px;
 	height: 140px;
@@ -63,6 +65,7 @@ div.lesson_header #lesson_description {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+	margin-top: 5px;
 }
 
 footer {
